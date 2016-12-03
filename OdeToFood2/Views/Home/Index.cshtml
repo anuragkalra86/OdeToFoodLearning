@@ -1,0 +1,13 @@
+﻿@model IQueryable<OdeToFood2.Models.RestaurantListViewModel>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@foreach (var item in Model)
+{
+    <h4>@item.Name</h4>
+    <div>@item.City, @item.Country</div>
+    <div>Reviews: @item.CountOfReviews</div>
+    <hr/>
+}
